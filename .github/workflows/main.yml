@@ -1,0 +1,13 @@
+name: Learn CI Pipeline
+
+on: [push]
+
+jobs:
+  say_hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v4
+
+      - name: Run the greeting script
+        run: chmod +x greeting.sh && ./greeting.sh
